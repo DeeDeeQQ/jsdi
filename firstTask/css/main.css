@@ -1,0 +1,60 @@
+body {
+    padding: 0 50px;
+}
+body hr {
+    width: 70%;
+    border: gray 1px solid
+}
+.letter hr {
+    /*border: black 1px solid;*/
+    border: black 1px solid;
+}
+.letter .thin {
+    border-width: 0.5px;
+}
+.letter h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.letter ol {
+    padding-left: 15px;
+    margin-top: 0;
+}
+.letter .ol {
+    margin-bottom: 0;
+}
+
+.whinterMorning h3 {
+    text-align: center;
+    margin-top: 15px;
+}
+.whinterMorning pre {
+    font-style: italic;
+    margin-left: 35px;
+}
+
+.whinterMorning p {
+    font-weight: bold;
+}
+.whinterMorning p:first-line {
+    line-height: 3;
+}
+
+.fermaTheorem h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+.fermaTheorem p {
+    line-height: 2;
+}
+.fermaTheorem p span {
+    font-style: italic;
+}
+
+.cSharp h2 {
+    text-align: center;
+}
+.cSharp {
+    margin-bottom: 50px;
+}
+

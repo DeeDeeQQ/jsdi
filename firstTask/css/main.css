@@ -5,6 +5,17 @@ body hr {
     width: 70%;
     border: gray 1px solid
 }
+
+.letter {
+    font-family: 'Roboto', sans-serif;
+}
+.cSharp {
+    font-family: 'Raleway', sans-serif;
+}
+.whinterMorning {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .letter hr {
     /*border: black 1px solid;*/
     border: black 1px solid;

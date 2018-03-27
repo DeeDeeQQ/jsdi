@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+
+    var a;
+    var b;
+    var c;
+    var result;
+
+    function script() {
+
+        a = prompt("Calc", "Input first value");
+        b = prompt("Calc", "Input second value");
+        c = prompt("Calc", "Choice operation - + * /");
+
+        a = parseInt(a);
+        b = parseInt(b);
+
+        if(isNaN(a) || isNaN(b)){
+                alert('You must input numbers!');
+                location.reload();
+            }
+
+        result = calc (a,b,c);
+        document.write (result);
+
+        function calc(a, b, c) {
+            switch (c) {
+                case "+":
+                    return a + b;
+                case "-":
+                    return a - b;
+                case "/":
+                    if (b !== 0) {
+                        return a / b;
+                    }
+                    else {
+                        return "can't divide by zero";
+                    }
+                case "*":
+                    return a * b;
+                default:
+                    alert('Choice operation - + * /');
+                    location.reload();
+            }
+        }
+    }
+    script();
+
+</script>
+<head>
+    <title></title>
+</head>
+<body>
+</body>
+</html>

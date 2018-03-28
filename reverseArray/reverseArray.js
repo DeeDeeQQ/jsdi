@@ -17,6 +17,7 @@ for( var i=0; i <= length - 1; i++) {
 }
 return result;
 }
+var reverseArray = reverse(array);
+console.log(reverseArray);
 
-console.log(reverse(array));
-
+console.log(reverseArray.sort(function (a, b) { return a-b;}));

@@ -27,10 +27,37 @@ Cоветую сразу писать с функциями. Функция до
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
 </head>
 <body>
-
+<div class="flex">
+    <div class="form">
+        <label for="name">Name:</label><br/>
+        <input type="text" id="name" ><br/>
+        <label for="Surname">Surname:</label><br/>
+        <input type="text" id="surname"><br/>
+        <label for="age">Age:</label><br/>
+        <input type="text" id="age"><br/>
+        <div id="button">
+            <button onclick= "get();">get</button>
+            <button onclick= "show();">show</button>
+        </div>
+        <div id="error"></div>
+    </div>
+    <table id="table" >
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+</script>
 </body>
+
+
 </html>

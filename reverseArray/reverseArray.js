@@ -21,3 +21,15 @@ var reverseArray = reverse(array);
 console.log(reverseArray);
 
 console.log(reverseArray.sort(function (a, b) { return a-b;}));
+
+//не уверен что это новый метод (как по мне работает он так же но другого не нашел
+
+console.log(reverseArray.sort(function (b,a){
+    if (a < b) {
+        return -1;
+    }
+    if (a > b) {
+        return 1;
+    }
+    return 0;
+}));

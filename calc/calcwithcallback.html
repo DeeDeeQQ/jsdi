@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+
+
+function script() {
+    result = prepare(calc);
+    document.write(result);
+}
+
+function prepare(callback) {
+    var a = prompt("Calc", "Input first value");
+    var b = prompt("Calc", "Input second value");
+    var c = prompt("Calc", "Choice operation - + * /");
+
+    a = parseInt(a);
+    b = parseInt(b);
+
+    if(isNaN(a) || isNaN(b)){
+        alert('You must input numbers!');
+        return prepare(calc);
+    } else if (c === '-' || c === '+' || c === '/' || c === '*'){
+        return callback(a, b, c);
+    } else {
+        alert("You must choice one of this operation - + * /");
+        return prepare(calc);
+    }
+}
+
+function calc(a, b, c) {
+    switch (c) {
+        case "+":
+            return a + b;
+        case "-":
+            return a - b;
+        case "/":
+            if (b !== 0) {
+                return a / b;
+            }
+            else {
+                return "can't divide by zero";
+            }
+        case "*":
+            return a * b;
+    }
+}
+script();
+
+</script>
+<head>
+<title></title>
+</head>
+<body>
+</body>
+</html>

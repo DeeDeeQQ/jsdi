@@ -16,6 +16,7 @@ function get()
     var name = document.getElementById("name").value;
     var surname = document.getElementById("surname").value;
     var age = document.getElementById("age").value;
+
     if(name&&surname&&age){
         err.innerHTML = '';
         new Person({

@@ -1,0 +1,175 @@
+
+body,html{width: 100%; height: 100%;}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background: snow;
+    color:black;
+    overflow-x: hidden;
+}
+.wrapper{
+    margin: 0 auto;
+    max-width: 1000px;
+    width:90%;
+}
+a{
+    text-decoration: none;
+    color: Steelblue;
+}
+a:hover{
+    color: DodgerBlue;
+}
+.code{
+    font-family: monospace;
+    padding: 0.2em 0.5em;
+    border-radius: 5%;
+    margin: 0 0.3em;
+    color:Sienna;
+    background:BurlyWood;
+}
+.code span{
+    color: orange;
+}
+.code .warn{
+    color: indianred;
+}
+article{padding-bottom: 5em;}
+header{
+    background: Black;
+    padding: 0.5em 0;
+    box-sizing: content-box;
+}
+header .wrapper * {
+    margin:0;
+    display: inline-block;
+    font-weight: normal;
+}
+header a{
+    float: right;
+    line-height: 2em;
+    margin-left: 1em !important;
+}
+header a:first-of-type::after{
+    content: "\f100";
+    font: 1em Flaticon;
+    margin: 0 0 0 0.3em;
+}
+header h1{
+    position:relative;
+    font-size: 120%;
+    top: -0.7em;
+    color:white;
+}
+header h1 span{
+    position:absolute;
+    top: 1.5em;
+    left:0;
+    text-transform: uppercase;
+    font-size: 70%;
+    color:LightSteelBlue;
+}
+.logo::after{
+    font:2em Flaticon;
+    content: "\f101";
+    display: inline;
+    color:white;
+    padding: 0 0.3em 0 0;
+}
+code{border:1px solid #2d3e5b;}
+
+#stopwatch{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    user-select: none;
+    cursor:default;
+}
+.display{
+    width:400px;
+    height:400px;
+    background: url(base.png);
+    position: relative;
+}
+.display p{
+    text-align: center;
+    width:100%;
+    position: absolute;
+    bottom: 50px;
+    color:black;
+    font-size:220%;
+}
+@keyframes arrow {
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+.arrow{
+    height:100%;
+    width:20px;
+    margin-left: -10px;
+    background:url(arrow.svg) no-repeat center top;
+    position:absolute;
+    left:50%;
+}
+.animate{
+    animation: arrow 60s linear infinite;
+}
+.pause{
+    animation-play-state: paused;
+}
+#controls div{
+    padding: 25px 0;
+    text-align: center;
+}
+#stopwatch:not(.active) #controls div:last-of-type{
+    display: none;
+}
+#stopwatch.active #controls div:first-of-type{
+    display: none;
+}
+#stopwatch button{
+    background: darkgray;
+    color:black;
+    border:none;
+    font-family: inherit;
+    width: 120px;
+    height:40px;
+    margin: 0 10px;
+    border-radius: 3px;
+}
+#stopwatch button:hover{
+    background-color: LightGray;
+    cursor:pointer;
+}
+#stopwatch #start_control{background-color:SeaGreen;color:white;}
+#stopwatch #stop_control{background-color: FireBrick;color:white;}
+#stopwatch #start_control:hover{background-color: MediumSeaGreen;}
+#stopwatch #stop_control:hover{background-color: IndianRed;}
+#stopwatch ul{
+    margin:0;
+    padding:0;
+    display: none;
+}
+#stopwatch .active ul{
+    display: block;
+}
+#stopwatch li{
+    position: relative;
+    line-height: 40px;
+    height:40px;
+    text-align: right;
+    padding: 0 5px;
+    list-style: none;
+}
+#stopwatch li::after{
+    content: "";
+    bottom:0;
+    left:0;
+    width: 100%;
+    position: absolute;
+    border-bottom: 1px solid darkgray;
+}
+#stopwatch li span{
+    position: absolute;
+    left: 10px;
+}

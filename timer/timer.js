@@ -97,4 +97,4 @@ function Timer(){
 
 }
 
-var Stopwatch = new Stopwatch();
+var Timer = new Timer();

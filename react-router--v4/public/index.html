@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tag above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+    <style>
+      .button{
+        display: inline-block;
+        font-weight: 700;
+        text-decoration: none;
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 20%;
+        user-select: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 0;
+        outline: none;
+      }
+
+      .button--medium{
+        min-width: 210px;
+        min-height: 69px;
+        height: 60px;
+        font-size: 14px;
+        line-height: 60px;
+      }
+      .button--large{
+        min-width: 300px;
+        min-height: 60px;
+        line-height: 1.2;
+        font-size: 16px;
+        text-transform: uppercase;
+
+      }
+      .theme-orange {
+        box-shadow: 0 0 3px #d9d9d9, inset 0 1px 0 hsla(0,0%,100%,.21);
+        background-color: #44dacc;
+        background-image: linear-gradient(20deg,#ff4800 0,#ffa54d 100%);
+        text-transform: uppercase;
+        color: #fff;
+      }
+      .theme-blue {
+        background: #5791ef linear-gradient(0deg,rgba(75,133,238,.67) 0,rgba(116,176,248,.67) 99%,rgba(116,176,248,.67));
+        color: #fff;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start`.
+      To create a production bundle, use `npm run build`.
+    -->
+  </body>
+</html>

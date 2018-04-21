@@ -18,7 +18,8 @@ const lessons = [
   { id: "12-Prompt" },
   { id: "13-Routers" },
   { id: "14-Accordeon" },
-  { id: "15-Buttons" }
+  { id: "15-Buttons" },
+  { id: "16-Redux" }
 ];
 
 lessons.forEach(l => (l.Component = require(`./lessons/${l.id}/App`).default));
@@ -38,7 +39,6 @@ const Back = () => (
     <Link to="/">&larr;Back to lessons</Link>
   </div>
 );
-
 
 class App extends React.Component {
   render() {

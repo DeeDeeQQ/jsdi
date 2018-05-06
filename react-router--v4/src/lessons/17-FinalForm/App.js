@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Form, Field } from "react-final-form";
 import { connect } from "react-redux";
+import { getList } from "../../actions/form";
+import countriesList from "../../redusers/countries";
 
 class App extends Component {
   render() {
@@ -8,16 +10,13 @@ class App extends Component {
       data,
       logClick = () => {
         console.log(data);
-        data.map(e => console.log(e.name));
-      },
-      handleClick = () => {}
+      }
     } = this.props;
-    console.log(data);
     return (
       <div className="container">
         <button
           onClick={() => {
-            handleClick();
+            this.props.onGetList();
           }}
         >
           Show
@@ -29,7 +28,7 @@ class App extends Component {
         >
           log
         </button>
-        <ul>{data.map(e => <li>{e.name}</li>)}</ul>
+        <ul>{data.map(e => <li>{e}</li>)}</ul>
       </div>
     );
   }
@@ -37,12 +36,11 @@ class App extends Component {
 
 export default connect(
   state => ({
-    data: state
+    data: state.form
   }),
   dispatch => ({
-    handleClick: () =>
-      dispatch({
-        type: "VIEW_LIST"
-      })
+    onGetList: () => {
+      dispatch(getList());
+    }
   })
 )(App);

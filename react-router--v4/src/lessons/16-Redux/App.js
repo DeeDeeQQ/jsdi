@@ -80,7 +80,7 @@ class App extends Component {
 
 export default connect(
   state => ({
-    data: state,
+    data: state.redux,
     editID: null
   }),
   dispatch => ({
